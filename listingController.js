@@ -13,14 +13,17 @@ angular.module('listings').controller('ListingsController', ['$scope', '$window'
 
     $scope.addListing = function() {
       $scope.listings.push({code: this.cd, 
-            "name": this.bn, 
-            "coordinates": {
-                "latitude": 29.6515682, 
-                "longitude": -82.3418895
+            name: this.bn, 
+            coordinates: {
+                latitude: this.lat, 
+                longitude: this.long
             }, 
-            "address": "1507 W University Ave, Gainesville, FL 32611, United States"});
+            address: this.addr});
       this.cd = '';
       this.bn = '';
+      this.lat = '';
+      this.long = '';
+      this.addr = '';
     };
     $scope.deleteListing = function(index) {
       this.listings.splice( indexHere, 1);
