@@ -51,17 +51,22 @@
             -->
 
 
-          <form ng-submit="this.addListing()">
-            <label> Code <input type="text" ng-model="cd"  size="5px"
-               placeholder="code"> </label>
-            <label> Building Name <input type="text" ng-model="bn"  size="30"
+          <form class="space jumbotron" ng-submit="this.addListing()">
+            <h2>Add New Entry</h2>
+            <label>Code <input class="placehold" type="text" ng-model="cd"  size="5px"
+               placeholder="code"> </label> <br>
+            <label>Building Name <input class="placehold" type="text" ng-model="bn"  size="30"
                placeholder="building name"> </label> <br>
-            <label> Coordinates </label> <br> <label>Latitude<input type="text" ng-model="lat"  size="30"
-               placeholder="latitude"></label> <label>Longitude<input type="text" ng-model="long"  size="30"
+            <label>Coordinates </label> <br> <label class="shift placehold">Latitude <input type="text" ng-model="lat"  size="34"
+               placeholder="latitude"></label> <label class="shift placehold">Longitude <input type="text" ng-model="long"  size="32"
                placeholder="longitude"> </label> </label>
-            <label> Address <input type="text" ng-model="addr"  size="30"
-               placeholder="address"> </label>
-            <input class="btn-primary" type="submit" value="add"> 
+            <label>Address <input class="placehold" type="text" ng-model="addr"  size="36"
+               placeholder="address"> </label><br><br>
+            <!-- <input class="btn-primary" type="submit" value="Add New">   -->
+
+            <button type="submit" class="btn btn-primary">
+              <i class="glyphicon glyphicon-plus"></i> Add New
+            </button>
           </form>
 
 
@@ -90,13 +95,18 @@
                <dd>{{selectedAddress}}</dd>
              </dl>
 
+            <form ng-submit="this.deleteListing()">
+              <button type="submit" class="btn btn-primary">
+                 X Delete Entry
+              </button>
+            </form>
+
 
           </div>
         </div>
         
-        <label ng-show = clicked> code{{ctrl.detailedInfo.code}} </label>
-              <form ng-submit="this.deleteListing()">
-              <input class="btn-primary" type="submit" value="delete">
+        <!-- <label ng-show = clicked> code{{ctrl.detailedInfo.code}} </label> -->
+        
       </div>
     </div>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>

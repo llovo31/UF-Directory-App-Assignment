@@ -6,3 +6,15 @@
   max-height: 400px;
   overflow: auto;
 }
+
+.placehold{
+	font-weight: 400;
+}
+
+.shift{
+	margin-left: 20px;
+}
+
+.space{
+	margin-top: 40px;
+}

@@ -6,6 +6,12 @@ angular.module('listings').controller('ListingsController', ['$scope', '$window'
     this.listings = Listings;
     var indexHere = 0;
 
+    $scope.selectedCode = null;
+    $scope.selectedBuilding = null;
+    $scope.selectedlat = null;
+    $scope.selectedlong = null;      
+    $scope.selectedAddress = null;  
+
     /* 
       Implement these functions in the controller to make your application function 
       as described in the assignment spec. 
@@ -27,6 +33,12 @@ angular.module('listings').controller('ListingsController', ['$scope', '$window'
     };
     $scope.deleteListing = function(index) {
       this.listings.splice( indexHere, 1);
+
+      $scope.selectedCode = null;
+      $scope.selectedBuilding = null;
+      $scope.selectedlat = null;
+      $scope.selectedlong = null;      
+      $scope.selectedAddress = null;  
 
     };
     $scope.showDetails = function(index) {
